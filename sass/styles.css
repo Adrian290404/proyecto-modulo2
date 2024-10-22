@@ -15,6 +15,13 @@ html, body {
   overflow-x: hidden;
 }
 
+.percentageScroller {
+  position: fixed;
+  height: 0.3em;
+  background-color: red;
+  z-index: 2;
+}
+
 .header__nav {
   box-shadow: rgba(0, 0, 0, 0.2901960784) 0px 3px 6px 0px;
   position: relative;

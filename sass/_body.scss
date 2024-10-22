@@ -12,3 +12,9 @@ html, body {
     box-sizing: border-box;
     overflow-x: hidden;
 }
+.percentageScroller{
+    position: fixed;
+    height: .3em; 
+    background-color: red; 
+    z-index: 2;
+}
