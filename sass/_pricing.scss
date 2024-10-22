@@ -1,0 +1,165 @@
+.pricing{
+    margin-top: 3.5em;
+    background-color: #FFFFFF;
+    &__title{
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 2.25rem;
+        line-height: 2.625rem;
+        text-align: center;
+    }
+    &__offers-container{
+        &__offer{
+            position: relative;
+            width: 80%;
+            border: 0.0625rem solid #000000;
+            border-radius: 1.125rem;
+            margin: 1em auto 3.4em auto;
+            display: flex;
+            justify-content: space-around;
+            padding: 2em 0 1em 0;
+            &--basic{
+                border-color: #FB3B64;
+            }
+            &--professional{
+                border-color: #07ACE6;
+            }
+            &--premium{
+                border-color: #55DFB4;
+            }
+            &__left{
+                width: 50%;
+                text-align: center;
+                margin-bottom: 3em;
+                &__title{
+                    margin-top: 2.3em;
+                    font-family: "Raleway", sans-serif;
+                    font-weight: 700;
+                    font-size: 1.25rem;
+                    line-height: 1.5rem;
+                }
+                &__price{
+                    font-family: "Open Sans", sans-serif;
+                    font-weight: 300;
+                    font-size: 2.875rem;
+                    line-height: 4rem;
+                    &--basic{
+                        color: #FB3B64;
+                    }
+                    &--professional{
+                        color: #07ACE6;
+                    }
+                    &--premium{
+                        color: #55DFB4;
+                    }
+                }
+                &__subtitle{
+                    font-family: "Raleway", sans-serif;
+                    font-weight: 700;
+                    font-size: 0.75rem;
+                    line-height: 0.875rem;
+                }
+            }
+            &__right{
+                font-family: "Open Sans", sans-serif;
+                font-weight: 400;
+                font-size: 0.875rem;
+                line-height: 1.1875rem;
+                &__container{
+                    word-spacing: 0.125rem;
+                    &__check{
+                        list-style-image: url('../img/Checkbox.png');
+                        padding-bottom: 1em;
+                    }
+                    &__cross{
+                        list-style-image: url('../img/Cross.png');
+                        padding-bottom: 1em;
+                    }
+                }
+            }
+            &__button{
+                font-family: "Open Sans", sans-serif;
+                font-weight: 700;
+                font-size: 0.8125rem;
+                line-height: 1.0625rem;
+                word-spacing: 0.125rem;
+                border: none;
+                border-radius: 1.4375rem;
+                color: #FFFFFF;
+                padding: 1.2em 4em;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, calc(-50% + 9.2em));
+                &--basic{
+                    background-color: #EB476E;
+                    transform: translate(-50%, calc(-50% + 8.7em));
+                }
+                &--professional{
+                    background-color: #07ACE6;
+                }
+                &--premium{
+                    background-color: #55DFB4;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1000px) {
+        &__offers-container{
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;    
+            gap: 5em;
+            &__offer--basic:hover{
+                transform: scale(1.1);
+                box-shadow: 5px 10px 27px 0px #EB476E4A;
+            }
+            &__offer--professional:hover{
+                transform: scale(1.1);
+                box-shadow: 5px 10px 27px 0px #07ACE64A;
+            }
+            &__offer--premium:hover{
+                transform: scale(1.1);
+                box-shadow: 5px 10px 27px 0px #55DFB44A;
+            }        
+            &__offer{
+                position: relative;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 2em;
+                &__left{
+                    margin-bottom: 2em;
+                    &__title{
+                        margin: 0;
+                    }
+                    &__price{
+                        &--basic{
+                            margin-bottom: .3em;
+                        }
+                    }
+                }
+                &__right{
+                    position: static;
+                    margin-bottom: 2em;
+                    &__container{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        &__check{
+                            list-style-image: url('../img/Checkbox.png');
+                            margin: .2em auto;
+                        }
+                        &__cross{
+                            list-style-image: url('../img/Cross.png');
+                            margin: .2em auto;
+                        }
+                    }
+                }
+                &__button{
+                    transform: translate(-50%, calc(-50% + 15.4em));
+                }
+            }
+        }
+    }
+}

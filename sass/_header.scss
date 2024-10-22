@@ -1,0 +1,136 @@
+.header{
+    &__nav{
+        box-shadow: #0000004A 0px 3px 6px 0px ;
+        position: relative;
+        padding: 1em 2em;
+        &__title{
+            font-family: "Raleway", sans-serif;
+            font-weight: 300;
+            font-size: 2rem;
+            line-height: 2.3rem;
+            color: #08A6E4;
+            
+        }
+        &__dropdown{
+            position: absolute;
+            top: 1.7em;
+            right: 1.8em;
+            color: #08A6E4;
+        }
+        &__dropdown{
+            cursor: pointer;
+            position: absolute;
+            top: 1.7em;
+            right: 1.8em;
+            color: #08A6E4;
+            &--close{
+                display: none;
+            }
+        }
+        &__list{
+            margin-top: 2em;
+            display: none;
+            &__item{
+                list-style: none;
+                font-family: "Open Sans", sans-serif;
+                font-weight: 700;
+                font-size: 0.7rem;
+                line-height: 0.9rem;
+                letter-spacing: 0.2rem;
+                color: #A5A5A5;
+                margin-bottom: 1.5em;
+                &--selected{
+                    color: #000000;
+                }
+            }
+        }  
+    }
+    &__sell-more{
+        margin-top: 6.2em;
+        text-align: center;
+        &__title{
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            font-size: 2.2rem;
+            line-height: 2.5rem;
+            color: #000000;
+        }
+        &__description{
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            margin: 1.5em auto 2.5em auto;
+            width: 70%;
+        }
+        &__button{
+            font-family: "Open Sans", sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            background-color: #08A6E4;
+            box-shadow: #07ACE64A 5px 10px 14px 0px;
+            border-radius: 2.8rem;
+            border: none;
+            color: white;
+            padding: 1.3em 5.4em;
+        }
+    }
+    &__image-container{
+        margin-top: 1em;
+        &__laptop-image{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            &--desktop{
+                display: none;
+            }
+        }
+    }
+    @media only screen and (min-width: 1000px) {
+        &__nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__title{
+                display: inline-flex;
+            }
+            &__dropdown{
+                display: none;
+            }
+            &__list{
+                display: flex;
+                &__item{
+                    padding: 2.3em .5em;        
+                    margin-right: 8em;     
+                    &--selected{
+                        border-bottom: 4px solid #08A6E4;
+                    }
+                }
+                
+            }
+        }
+        &__sell-more{
+            &__title{
+                font-size: 3rem;
+                line-height: 3.5rem;
+            }
+            &__description{
+                line-height: 1.4rem;
+            }
+            &__button{
+                padding: 1.3em 10em;
+            }
+        }
+        &__image-container{
+            &__laptop-image{
+                &--mobile{
+                    display: none;
+                }
+                &--desktop{
+                    display: block;
+                }
+            }
+        }
+    }
+}
