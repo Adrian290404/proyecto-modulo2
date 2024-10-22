@@ -18,3 +18,24 @@ html, body {
     background-color: red; 
     z-index: 2;
 }
+.buttonReturn{
+    margin: 0 auto;
+    margin-bottom: 1em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    line-height: 1.0625rem;
+    letter-spacing: 0.125rem;
+    color: #FFFFFF;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 2.1875rem;
+    background-color: #08A6E4;
+    box-shadow: #07ACE64A 5px 10px 14px 0px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 6em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
