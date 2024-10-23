@@ -1,3 +1,5 @@
+//Form validation
+
 const button = document.getElementById('topButton');
 button.addEventListener('click', () => {
     setTimeout(() => {
