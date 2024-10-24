@@ -86,6 +86,9 @@
 .none {
     display: none;
 }
+.none-list{
+    display: none;
+}
 .list {
     display: block;
 }
@@ -121,6 +124,12 @@
                 font-size: 1rem;
             }
         }
+    }
+    .none-list{
+        display: flex;
+    }
+    .block{
+        display: none;
     }
     .list{
         display: flex;

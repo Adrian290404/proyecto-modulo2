@@ -2,7 +2,6 @@
 const openDropdown = document.getElementById('openDropdown')
 const closeDropdown = document.getElementById('closeDropdown')
 const list = document.getElementById('list')
-
 const classManagement = (class1, class2, class3, class4, class5, class6) => {
     closeDropdown.classList.remove(class1)
     closeDropdown.classList.add(class2)    
@@ -11,15 +10,16 @@ const classManagement = (class1, class2, class3, class4, class5, class6) => {
     list.classList.remove(class5)
     list.classList.add(class6)
 }
+
 openDropdown.addEventListener('click', () => {
-    classManagement('none', 'block', 'block', 'none', 'none', 'list')
+    classManagement('none', 'block', 'block', 'none', 'none-list', 'list')
 })
 closeDropdown.addEventListener('click', () => {
-    classManagement('block', 'none' , 'none', 'block', 'list', 'none')
+    classManagement('block', 'none' , 'none', 'block', 'list', 'none-list')
 })
-window.addEventListener('resize', () => {
-    window.matchMedia("(min-width: 1000px)").matches ? classManagement('block', 'none', 'block', 'none', 'none', 'list') : classManagement('block', 'none', 'none', 'block', 'list', 'none')
-})
+// window.addEventListener('resize', () => {
+//     window.matchMedia("(min-width: 1000px)").matches ? classManagement('block', 'none', 'block', 'none', 'none', 'list') : classManagement('block', 'none', 'none', 'block', 'list', 'none')
+// })
 //adapt screen change
 // const checkChangeScreen = () =>{
 //     if (window.matchMedia("(min-width: 1000px)").matches) {
