@@ -7,14 +7,12 @@ const formEmail = document.getElementById("email")
 const checkBox = document.getElementById("checkbox")
 let checkBoxChecked = false
 
-formName.addEventListener("input", () => {
+formName.addEventListener("change", () => {
     namePattern.test(formName.value) || formName.value === "" ? formName.style.borderColor = "#95989A" : formName.style.borderColor = "red"
 })
-formEmail.addEventListener("input", () => {
+formEmail.addEventListener("change", () => {
     emailPattern.test(formEmail.value) || formEmail.value === "" ? formEmail.style.borderColor = "#95989A" : formEmail.style.borderColor = "red"
 })
 checkBox.addEventListener("change", () => {
     checkBox.checked ? checkBoxChecked = true : checkBoxChecked = false
 })
-
-//

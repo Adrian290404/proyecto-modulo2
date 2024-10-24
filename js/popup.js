@@ -2,7 +2,7 @@ const popup = document.getElementById('popup')
 const btnClose = document.getElementById('closePopup')
 const emailPattern = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
 const popupShowed = () => {
-    return localStorage.getItem('popup') ? true : false
+    return localStorage.getItem('popup')
 }
 const showPopup = () => {
     if (!popupShowed()) {
@@ -10,7 +10,6 @@ const showPopup = () => {
         localStorage.setItem('popup', true)
     }
 }
-setTimeout(showPopup, 5000);
 window.addEventListener('scroll', () => {
     if (!popupShowed()) {
         const scrollHeight = document.body.scrollHeight
@@ -33,3 +32,4 @@ window.addEventListener('keyup', (e) => {
         popup.style.display = 'none'
     }
 })
+setTimeout(showPopup, 5000);

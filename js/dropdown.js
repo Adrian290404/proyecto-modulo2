@@ -3,30 +3,42 @@ const openDropdown = document.getElementById('openDropdown')
 const closeDropdown = document.getElementById('closeDropdown')
 const list = document.getElementById('list')
 
+const classManagement = (class1, class2, class3, class4, class5, class6) => {
+    closeDropdown.classList.remove(class1)
+    closeDropdown.classList.add(class2)    
+    openDropdown.classList.remove(class3)
+    openDropdown.classList.add(class4)   
+    list.classList.remove(class5)
+    list.classList.add(class6)
+}
 openDropdown.addEventListener('click', () => {
-    closeDropdown.style.display = 'block'
-    openDropdown.style.display = 'none'
-    list.style.display = 'block'
+    classManagement('none', 'block', 'block', 'none', 'none', 'list')
 })
 closeDropdown.addEventListener('click', () => {
-    closeDropdown.style.display = 'none'
-    openDropdown.style.display = 'block'
-    list.style.display = 'none'
+    classManagement('block', 'none' , 'none', 'block', 'list', 'none')
 })
-
-//adapt screen change
-const checkChangeScreen = () =>{
-    if (window.matchMedia("(min-width: 1000px)").matches) {
-        closeDropdown.style.display = 'none'
-        openDropdown.style.display = 'none'
-        list.style.display = 'flex'
-    }
-    else{
-        openDropdown.style.display = 'block'
-        closeDropdown.style.display = 'none'
-        list.style.display = 'none'
-    }
-}
 window.addEventListener('resize', () => {
-    checkChangeScreen()
+    window.matchMedia("(min-width: 1000px)").matches ? classManagement('block', 'none', 'block', 'none', 'none', 'list') : classManagement('block', 'none', 'none', 'block', 'list', 'none')
 })
+//adapt screen change
+// const checkChangeScreen = () =>{
+//     if (window.matchMedia("(min-width: 1000px)").matches) {
+//         closeDropdown.classList.add('none')
+//         openDropdown.classList.add('none')
+//         closeDropdown.classList.remove('block')
+//         openDropdown.classList.remove('block')
+//         list.classList.add('flex')
+//         list.classList.remove('none')
+//     }
+//     else{
+//         openDropdown.classList.remove('none')
+//         closeDropdown.classList.add('none')
+//         list.classList.add('none')
+//         openDropdown.classList.add('block')
+//         closeDropdown.classList.remove('block')
+//         list.classList.remove('flex')
+//     }
+// }
+// window.addEventListener('resize', () => {
+//     checkChangeScreen()
+// })
