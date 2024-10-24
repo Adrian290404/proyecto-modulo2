@@ -35,6 +35,34 @@ form.addEventListener("submit", (e) => {
         textCheckbox.classList.remove('none')
     }
     if (namePattern.test(formName.value) && emailPattern.test(formEmail.value) && checkBoxChecked) {
+        // API Testing
+
+        const url = 'https://jsonplaceholder.typicode.com/posts'
+        const formJson = {
+            title: 'form',
+            name: formName.value,
+            email: formEmail.value,
+            userId: 1,
+        }
+        fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(formJson),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+        })
+        .then((response) => {
+            if (response.ok){
+                return response.json().then((json) => console.log('Form data: ', json))
+            }
+            else{
+                throw new Error("Error on network response")
+            }
+        })
+        .catch((error) => {
+            throw new Error('Error: '+error)
+        })
+
         form.reset()
         alert("Form submitted successfully!")
     }
