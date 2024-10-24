@@ -23,7 +23,7 @@ formEmail.addEventListener("change", () => {
 checkBox.addEventListener("change", () => {
     checkBox.checked ? (checkBoxChecked = true, textCheckbox.classList.add('none')) : checkBoxChecked = false
 })
-const api = (urlApi, jsonApi) => {
+const api = (urlApi, jsonApi, form) => {
     fetch(urlApi, {
         method: 'POST',
         body: JSON.stringify(jsonApi),
@@ -70,7 +70,7 @@ form.addEventListener("submit", (e) => {
             email: formEmail.value,
             userId: 1,
         }
-        api(url, formJson)
+        api(url, formJson, form)
     }
 })
 
@@ -89,7 +89,8 @@ formSubscribe.addEventListener("submit", (e) => {
             email: formSubscribeEmail.value,
             userId: 2,
         }
-        api(url, formJson)
+        api(url, formJson, subscribe)
+        setTimeout(location.reload(), 2000)
     }
 
 })

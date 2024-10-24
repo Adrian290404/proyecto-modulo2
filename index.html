@@ -115,11 +115,16 @@
     </section>
     <section class="pricing">
         <p class="pricing__title">Pricing</p>
+        <select class="pricing__select" id="coin">
+            <option value="usd">USD</option>
+            <option value="eur">EUR</option>
+            <option value="gbp">GBP</option>
+        </select>
         <div class="pricing__offers-container">
             <article class="pricing__offers-container__offer pricing__offers-container__offer--basic">
                 <div class="pricing__offers-container__offer__left">
                     <p class="pricing__offers-container__offer__left__title">Basic</p>
-                    <p class="pricing__offers-container__offer__left__price pricing__offers-container__offer__left__price--basic">$0</p>
+                    <p class="pricing__offers-container__offer__left__price pricing__offers-container__offer__left__price--basic" id="basicPrice">$0</p>
                 </div>
                 <div class="pricing__offers-container__offer__right">
                     <ul class="pricing__offers-container__offer__right__container">
@@ -135,7 +140,7 @@
             <article class="pricing__offers-container__offer pricing__offers-container__offer--professional">
                 <div class="pricing__offers-container__offer__left">
                     <p class="pricing__offers-container__offer__left__title">Professional</p>
-                    <p class="pricing__offers-container__offer__left__price pricing__offers-container__offer__left__price--professional">$25</p>
+                    <p class="pricing__offers-container__offer__left__price pricing__offers-container__offer__left__price--professional" id="professionalPrice">$25</p>
                     <p class="pricing__offers-container__offer__left__subtitle">Limited offer</p>
                 </div>
                 <div class="pricing__offers-container__offer__right">
@@ -152,7 +157,7 @@
             <article class="pricing__offers-container__offer pricing__offers-container__offer--premium">
                 <div class="pricing__offers-container__offer__left">
                     <p class="pricing__offers-container__offer__left__title">Premium</p>
-                    <p class="pricing__offers-container__offer__left__price pricing__offers-container__offer__left__price--premium">$60</p>
+                    <p class="pricing__offers-container__offer__left__price pricing__offers-container__offer__left__price--premium" id="premiumPrice">$60</p>
                     <p class="pricing__offers-container__offer__left__subtitle">Limited offer</p>
                 </div>
                 <div class="pricing__offers-container__offer__right">

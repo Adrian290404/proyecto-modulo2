@@ -8,6 +8,23 @@
         line-height: 2.625rem;
         text-align: center;
     }
+    &__select{
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #f3f4f6;
+        border: 1px solid #ccc;
+        color: #333;
+        font-size: 16px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        appearance: none; /* Ocultar el estilo predeterminado */
+        background-image: url('https://image.flaticon.com/icons/png/512/892/892458.png'); /* Icono personalizado */
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px;
+        transition: all 0.3s ease;
+        display: block;
+        margin: 1em auto 2em auto;
+    }
     &__offers-container{
         &__offer{
             position: relative;
@@ -127,7 +144,7 @@
                 position: relative;
                 flex-direction: column;
                 align-items: center;
-                margin-top: 2em;
+                margin-top: .4em;
                 &__left{
                     margin-bottom: 2em;
                     &__title{
