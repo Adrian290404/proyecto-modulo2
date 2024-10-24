@@ -643,6 +643,11 @@ html, body {
 .contact__right__details__input:focus {
   outline: none;
 }
+.contact__right__details__name-alert, .contact__right__details__email-alert {
+  color: red;
+  margin-top: -2.5em;
+  margin-bottom: 2em;
+}
 .contact__right__terms-conditions {
   position: relative;
   display: block;
@@ -678,6 +683,11 @@ html, body {
   box-shadow: rgba(7, 172, 230, 0.2901960784) 5px 10px 14px 0px;
   display: block;
   margin: 3em 0 3em auto;
+  cursor: pointer;
+}
+.contact__right__terms-conditions__checkbox-alert {
+  color: red;
+  margin-top: 0.5em;
 }
 @media only screen and (min-width: 1000px) {
   .contact {
@@ -844,6 +854,14 @@ html, body {
 
 .list {
   display: block;
+}
+
+.red {
+  border-color: red;
+}
+
+.form-border-color {
+  border-color: #95989A;
 }
 
 @media only screen and (min-width: 1000px) {

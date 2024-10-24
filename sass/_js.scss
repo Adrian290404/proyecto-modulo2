@@ -92,6 +92,12 @@
 .list {
     display: block;
 }
+.red{
+    border-color: red;
+}
+.form-border-color{
+    border-color: #95989A;
+}
 @media only screen and (min-width: 1000px) {
     .buttonReturn{
         right: 10%;

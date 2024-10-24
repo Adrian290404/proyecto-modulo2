@@ -181,17 +181,22 @@
             </div>
         </div>
         <div class="contact__right">
-            <article class="contact__right__details">
-                <label class="contact__right__details__label" for="name">NAME</label>
-                <input type="text" class="contact__right__details__input" id = "name" name = "name">
-                <label class="contact__right__details__label" for="email">EMAIL</label>
-                <input type="text" class="contact__right__details__input" id = "email" name = "email">
-            </article>
-            <article class="contact__right__terms-conditions">
-                <input type="checkbox" class="contact__right__terms-conditions__checkbox" id = "checkbox">
-                <p class="contact__right__terms-conditions__text">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
-                <button class="contact__right__terms-conditions__button">Send</button>
-            </article>
+            <form id="form">
+                <article class="contact__right__details">
+                    <label class="contact__right__details__label" for="name">NAME</label>
+                    <input type="text" class="contact__right__details__input" id = "name" name = "name">
+                    <p class="contact__right__details__name-alert none" id="textAlert">You must enter a valid name.</p>
+                    <label class="contact__right__details__label" for="email">EMAIL</label>
+                    <input type="text" class="contact__right__details__input" id = "email" name = "email">
+                    <p class="contact__right__details__email-alert none" id="emailAlert">You must enter a valid email.</p>
+                </article>
+                <article class="contact__right__terms-conditions">
+                    <p class="contact__right__terms-conditions__checkbox-alert none" id="checkboxAlert">You must accept our terms and conditions.</p>
+                    <input type="checkbox" class="contact__right__terms-conditions__checkbox" id = "checkbox">
+                    <p class="contact__right__terms-conditions__text">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
+                    <button class="contact__right__terms-conditions__button">Send</button>
+                </article>
+            </form>
         </div>
     </section>
     <button class="buttonReturn" id="topButton">Return to the top</button>
