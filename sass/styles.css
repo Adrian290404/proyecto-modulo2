@@ -575,6 +575,7 @@ html, body {
     margin-top: 0.4em;
   }
   .pricing__offers-container__offer__left {
+    width: 100%;
     margin-bottom: 2em;
   }
   .pricing__offers-container__offer__left__title {
@@ -903,6 +904,26 @@ html, body {
   border-color: #95989A;
 }
 
+.fa-circle {
+  color: #95989A;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  cursor: pointer;
+}
+
+.active {
+  color: white;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+  color: #95989A;
+  background-color: rgba(0, 0, 0, 0.521);
+  border: 0.1em solid #95989A;
+  padding: 0.5em 0.25em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 1000px) {
   .popup {
     max-width: 60em;
@@ -942,5 +963,49 @@ html, body {
   }
   .list {
     display: flex;
+  }
+}
+.slider {
+  margin-top: 6em;
+  margin-bottom: 6em;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+}
+.slider__image {
+  width: 100%;
+}
+.slider__image--second {
+  display: none;
+}
+.slider__image--thirth {
+  display: none;
+}
+.slider__image--fourth {
+  display: none;
+}
+.slider__image--fifth {
+  display: none;
+}
+.slider__points {
+  position: absolute;
+  bottom: 0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slider__arrow--right {
+  right: 1em;
+}
+.slider__arrow--left {
+  left: 1em;
+}
+@media only screen and (min-width: 1000px) {
+  .slider__container {
+    width: 50%;
   }
 }/*# sourceMappingURL=styles.css.map */

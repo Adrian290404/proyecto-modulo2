@@ -118,6 +118,23 @@
 .form-border-color{
     border-color: #95989A;
 }
+.fa-circle{
+    color: #95989A;
+    margin-left: .2em;
+    margin-right: .2em;
+    cursor: pointer;
+}
+.active{
+    color: white;
+}
+.fa-chevron-left, .fa-chevron-right{
+    color: #95989A;
+    background-color: rgba(0, 0, 0, 0.521);
+    border: .1em solid #95989A;
+    padding: .5em .25em;
+    border-radius: 50%;
+    cursor: pointer;
+}
 @media only screen and (min-width: 1000px) {
     .popup{
         max-width: 60em;
