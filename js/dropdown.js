@@ -10,7 +10,7 @@ const classManagement = (class1, class2, class3, class4, class5, class6) => {
     list.classList.remove(class5)
     list.classList.add(class6)
 }
-
+//dar una vuelta
 openDropdown.addEventListener('click', () => {
     classManagement('none', 'block', 'block', 'none', 'none-list', 'list')
 })

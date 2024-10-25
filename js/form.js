@@ -11,6 +11,7 @@ const checkBox = document.getElementById("checkbox")
 const textName = document.getElementById("textAlert")
 const textEmail = document.getElementById("emailAlert")
 const textCheckbox = document.getElementById("checkboxAlert")
+const popup = document.getElementById("popup")
 const url = 'https://jsonplaceholder.typicode.com/posts'
 let checkBoxChecked = false
 
@@ -23,7 +24,7 @@ formEmail.addEventListener("change", () => {
 checkBox.addEventListener("change", () => {
     checkBox.checked ? (checkBoxChecked = true, textCheckbox.classList.add('none')) : checkBoxChecked = false
 })
-const api = (urlApi, jsonApi, form) => {
+const api = (urlApi, jsonApi) => {
     fetch(urlApi, {
         method: 'POST',
         body: JSON.stringify(jsonApi),
@@ -35,7 +36,6 @@ const api = (urlApi, jsonApi, form) => {
             if (response.ok){
                 return response.json().then((json) => {
                     console.log('Form data: ', json)       
-                    form.reset()
                     alert("Form submitted successfully!")
                 })
             }
@@ -49,6 +49,7 @@ const api = (urlApi, jsonApi, form) => {
 }
 form.addEventListener("submit", (e) => {
     e.preventDefault()
+    //se puede poner con una funcion
     if (!namePattern.test(formName.value)) {
         formName.classList.add('red')
         textName.classList.remove('none')
@@ -70,7 +71,8 @@ form.addEventListener("submit", (e) => {
             email: formEmail.value,
             userId: 1,
         }
-        api(url, formJson, form)
+        api(url, formJson)
+        form.reset()
     }
 })
 
@@ -89,8 +91,8 @@ formSubscribe.addEventListener("submit", (e) => {
             email: formSubscribeEmail.value,
             userId: 2,
         }
-        api(url, formJson, subscribe)
-        setTimeout(location.reload(), 2000)
+        api(url, formJson)
+        formSubscribe.reset()
+        popup.style.display = "none"
     }
-
 })

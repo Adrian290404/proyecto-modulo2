@@ -3,6 +3,7 @@ class Slider {
         this.slider = document.getElementById(id)
         this.images = [...this.slider.querySelectorAll('img')]
         this.imageSelected = 0
+        this.applyEvents()
     }
     applyEvents(){
         this.slider.querySelector('.slider__arrow--right').addEventListener('click', () => {
@@ -27,4 +28,3 @@ class Slider {
 }
 
 const slider = new Slider('slider')
-slider.applyEvents()
