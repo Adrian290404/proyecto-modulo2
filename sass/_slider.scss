@@ -1,45 +1,26 @@
 .slider{
-    margin-top: 6em;
-    margin-bottom: 6em;
-    // &__container{
-        width: 60%;
-        margin: 0 auto;
-        position: relative;
-        &__image{
-            width: 100%;
-            &--second{
-                display: none;
-            }
-            &--thirth{
-                display: none;
-            }
-            &--fourth{
-                display: none;
-            }
-            &--fifth{
-                display: none;
-            }
+    width: 60%;
+    margin: 5em auto;
+    padding: 3em, 0;
+    position: relative;
+    &__image{
+        width: 100%;
+    }
+    &__dots{
+        position: absolute;
+        bottom: .5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__arrow{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        &--right{
+            right: 1em;
         }
-        &__points{
-            position: absolute;
-            bottom: .5em;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        &__arrow{
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            &--right{
-                right: 1em;
-            }
-            &--left{
-                left: 1em;
-            }
-        }
-    @media only screen and (min-width: 1000px) {
-        &__container{
-            width: 50%;
+        &--left{
+            left: 1em;
         }
     }
 }
