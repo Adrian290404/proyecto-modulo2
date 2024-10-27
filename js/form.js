@@ -47,21 +47,18 @@ const api = (urlApi, jsonApi) => {
             console.log('Error: '+error)
         })
 }
+const verificate = (condition, add, remove) => {
+    if (condition){
+        add.classList.add('red')
+        remove.classList.remove('none')
+    }
+}
 form.addEventListener("submit", (e) => {
     e.preventDefault()
-    //se puede poner con una funcion
-    if (!namePattern.test(formName.value)) {
-        formName.classList.add('red')
-        textName.classList.remove('none')
-    }
-    if (!emailPattern.test(formEmail.value)) {
-        formEmail.classList.add('red')
-        textEmail.classList.remove('none')
-    }
-    if (!checkBoxChecked) {
-        formName.classList.add('red')
-        textCheckbox.classList.remove('none')
-    }
+    verificate(!namePattern.test(formName.value), formName, textName)
+    verificate(!emailPattern.test(formEmail.value), formEmail, textEmail) 
+    verificate(!checkBoxChecked, formName, textCheckbox)
+
     if (namePattern.test(formName.value) && emailPattern.test(formEmail.value) && checkBoxChecked) {
         // API Testing
 

@@ -30,24 +30,19 @@
     display: none;
     background-color: #FFFFFF;
     width: 70%;
-    border: .1em solid rgba(105, 102, 102, 0.342);
-    border-radius: 0.3125rem;
+    border: .1em solid rgba(#08A6E4, 0.342);
+    border-radius: 1rem;
     position: fixed;
     z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 50px #07abe6;
+    text-align: center;
     &__container{
         position: relative;
         padding: 1em 1em;
-        &__up{
-            font-family: "Raleway", sans-serif;
-            font-weight: 500;
-            font-size: 1.6rem;
-            color: #08A6E4;
-            text-decoration: underline;
-        }
+
         &__close{
             position: absolute;
             font-size: 1rem;
@@ -69,10 +64,11 @@
             font-weight: 500;
             font-size: .8rem;
             border: none;
-            border-bottom: .1em solid #757677;
+            border-bottom: .1em solid #08A6E4;
             width: 90%;
             margin-top: 1.5em;
             margin-bottom: 2em;
+            text-align: center;
         }
         &__form:focus {
             outline: none;
@@ -100,17 +96,14 @@
         }
     }
 }
-.block {
-    display: block;
+.hidden {
+    display: none;
+}
+.flex{
+    display: none;
 }
 .none {
     display: none;
-}
-.none-list{
-    display: none;
-}
-.list {
-    display: block;
 }
 .red{
     border-color: red;
@@ -140,24 +133,22 @@
         max-width: 60em;
         &__container{
             padding: 3em 3em;
-            &__up{
-                font-size: 3rem;
-            }
             &__close{
                 font-size: 2rem;
-                top: 1.5em;
-                right: 1.5em;
+                top: .5em;
+                right: .5em;
             }
             &__title{
                 font-size: 2rem;
-                margin-top: 3em;
+                margin-top: 1em;
                 margin-bottom: 1em;
             }
             &__form{
                 font-size: 1rem;
             }
             &__description{
-                margin-top: 4em;
+                margin-top: 1em;
+                margin-bottom: 2em;
                 font-size: 1rem;
             }
             &__subscribe-button{
@@ -166,13 +157,10 @@
             }
         }
     }
-    .none-list{
+    .flex{
         display: flex;
     }
     .block{
         display: none;
-    }
-    .list{
-        display: flex;
     }
 }

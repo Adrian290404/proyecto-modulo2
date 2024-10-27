@@ -23,13 +23,9 @@
             top: 1.7em;
             right: 1.8em;
             color: #08A6E4;
-            &--close{
-                display: none;
-            }
         }
         &__list{
             margin-top: 2em;
-            display: none;
             &__item{
                 list-style: none;
                 font-family: "Open Sans", sans-serif;
