@@ -4,6 +4,16 @@ class Slider {
         this.images = [...this.slider.querySelectorAll('img')]
         this.imageSelected = 0
         this.applyEvents()
+        setInterval(() => {
+            this.nextImage()
+        }, 5000)
+    }
+    nextImage() {
+        this.imageSelected++
+        if (this.imageSelected === this.images.length) {
+            this.imageSelected = 0
+        }
+        this.changeImage()
     }
     applyEvents(){
         this.slider.querySelector('.slider__arrow--right').addEventListener('click', () => {
